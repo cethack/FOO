@@ -9,3 +9,5 @@ Fleet Of One: Application to maintain and track personal assets such as receipts
 - We will use MongoDB as the backend database.
 - The application will be hosted in the cloud (Digital Ocean, Azure). 
 - Offline possibility
+
+- Added text
