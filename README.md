@@ -10,4 +10,5 @@ Fleet Of One: Application to maintain and track personal assets such as receipts
 - The application will be hosted in the cloud (Digital Ocean, Azure). 
 - Offline possibility
 
-- Added text
+
+- Added another one....
