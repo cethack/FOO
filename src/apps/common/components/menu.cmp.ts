@@ -64,7 +64,7 @@ export class MenuComponent {
     alert('task1');
     console.log('task 1');
     // TODO add component name
-    // this.router.navigate(['COMPONENT-NAME']);
+    this.router.navigate(['task1-cmp']);
   }
 
   goTask2(): void {
