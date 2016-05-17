@@ -1,0 +1,120 @@
+.login {
+  background-image: url(assets/images/mobile-traffic.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  &:not(.logged-in):not(.session-expired) {
+    position: fixed;
+    top:0; right: 0; left: 0; bottom: 0;
+    z-index: 1;
+  }
+
+  .logo {
+    padding-top: 20vh;
+    color: #fff;
+    padding-bottom: 50px;
+  }
+
+  form {
+    text-align: left;
+    padding: 8%;
+
+    .input-wrapper {
+      background-color: transparent;
+
+      .material-icons {
+        line-height: 55px;
+        margin-left: 10px;
+        color: #9b9b9b;
+      }
+
+      input {
+        border: 0;
+        height: 55px;
+        font-size: 15px;
+        padding-left: 35px;
+        padding-right: 5px;
+        border: 1px solid #cdcfd2;
+        border-radius: 3px;
+      }
+    }
+
+    .email, .password, .submit {
+      display: block;
+      height: 55px;
+      line-height: 55px;
+      margin: 15px 0;
+      font-size: 20px;
+
+      input {
+        background-color: #fff;
+      }
+      input[disabled] {
+        background-color: #fff;
+      }
+    }
+
+    .submit  button{
+      background-color: #009999;
+      color: #fff;
+      font-size: 20px;
+      width: 100%;
+      height: 100%;
+      text-transform: none;
+    }
+  }
+
+  /**
+  * media query parts -- mobile
+  */
+  @media (max-width: 767px) {
+    .hidden-xs {
+      display: none !important;
+    }
+
+    .logo {
+      padding-bottom: 0;
+
+      img {
+        width: 20%;
+      }
+    }
+  }
+
+  /**
+  * media query parts -- tablet
+  */
+  @media (min-width: 767px) {
+    background-image: url(assets/images/tablet-traffic.png);
+
+    form {
+      background-color: #fff;
+      width: 360px;
+      display: inline-block;
+      border-radius: 3px;
+      padding: 20px;
+
+      .title {
+        text-align: center;
+        padding-top: 20px;
+        font-size: 25px;
+      }
+
+    }
+  }
+
+  /**
+  * media query parts -- desktop
+  */
+  @media (min-width: 1023px) {
+    background-image: url(assets/images/desktop-traffic.png);
+  }
+
+  &.session-expired {
+    background-image: none;
+  }
+}

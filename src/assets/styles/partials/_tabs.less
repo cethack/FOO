@@ -1,0 +1,38 @@
+.tab-content {
+    padding-top: 1px;
+
+    h1, h2, h3, h3, h4, h5, h6 {
+        margin-top: 0;
+    }
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #fff;
+   
+     > li:hover, > li.active > a:hover {
+            cursor: pointer;
+   }
+
+    > li {
+        > a {
+            margin-right: 0;
+        }
+        &.active > a {
+            background-color: @white !important;
+        }
+        .badge {
+            background-color: transparent;
+            border: none;
+            color: inherit;
+            font-weight: inherit;
+            font-size: inherit;
+            padding: 0;
+            &:before {
+                content:"[";
+            }
+            &:after {
+                content:"]";
+            }
+        }
+    }
+}

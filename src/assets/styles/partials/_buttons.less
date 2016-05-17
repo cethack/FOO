@@ -1,0 +1,135 @@
+button {
+    outline: 0 !important;
+
+    &.fa-links {
+        border: 0;
+        background: none;
+        &:before {
+            content: none;
+        }
+        &:hover, &:active, &:focus {
+            outline: 0 !important;
+        }
+    }
+}
+
+.btn {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    line-height: 100%;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    font-weight: @font-bold;
+    border-radius: 2px;
+    border: 0;
+    outline: 0 !important;
+    outline-offset: 0 !important;
+    text-decoration: none;
+    .transition (background 0.1s ease-in-out);
+
+    &:active {
+        padding-top: 15px;
+        margin-bottom: -1px;
+        &:focus {
+            outline-offset: 0;
+        }
+    }
+
+    &[disabled=disabled] {
+        box-shadow: 0 3px 0 0 #efefef;
+        background: #bdbdbd;
+        color: #fbfbfb;
+    }
+}
+
+.btn-small {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.btn-default {
+    background: rgb(2, 127, 156);
+
+    &:hover, &:focus {
+        background: darken(rgb(2, 127, 156), 5%);
+    }
+}
+
+.btn-primary {
+    &:hover, &:focus {
+        background: darken(@brand-primary, 5%);
+    }
+}
+
+.btn-success {
+    box-shadow: 0 3px 0 0 darken(@brand-success, 10%);
+
+    &:hover, &:focus {
+        background: darken(@brand-success, 5%);
+    }
+}
+
+.btn-info {
+    box-shadow: 0 3px 0 0 darken(@brand-info, 10%);
+
+    &:hover, &:focus {
+        background: darken(@brand-info, 5%);
+    }
+}
+
+.btn-warning {
+    box-shadow: 0 3px 0 0 darken(@brand-warning, 10%);
+
+    &:hover, &:focus {
+        background: darken(@brand-warning, 5%);
+    }
+}
+
+.btn-danger {
+    box-shadow: 0 3px 0 0 darken(@brand-danger, 10%);
+
+    &:hover, &:focus {
+        background: darken(@brand-danger, 5%);
+    }
+}
+
+.btn-back {
+    i {
+        float: left;
+        margin: 18px 0 0 0;
+        color: @gray;
+
+        &:hover {
+            color: #333;
+        }
+    }
+}
+
+.btn-toolbar {
+    border: 2px #cacaca;
+    border-radius: 10px;
+    padding: 2px;
+    float: left;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+
+    &.raised {
+         border-style: outset;
+    }
+
+    &.pushed {
+         border-style: inset !important;
+         background-color: #d0d0d0 !important;
+    }
+}
+
+.btn-fa-icon {
+    opacity: 1;
+    font-size: 1.2em;
+}

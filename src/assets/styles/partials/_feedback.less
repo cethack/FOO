@@ -1,0 +1,112 @@
+﻿#feedback-editor {
+    padding:10px;
+
+    h2 {
+        font-size:32px;
+        display:inline;
+    }
+
+    .form-control {
+        margin-bottom: 10px;    
+    }
+
+    .modal-header {
+        i { 
+            padding-right:15px;
+        }
+
+        .fa-exclamation-triangle {
+            color: @alert-color
+        }
+
+        @media (max-width: @screen-xs-max) {
+            padding-top:0;
+            min-height:0;
+            margin-top:0;
+        } 
+    }
+
+    .modal-body {
+        padding-bottom:0;
+        padding-top:0;
+    }
+    
+    .modal-footer {
+        padding-top:0;
+
+        i {
+            padding-right:10px;
+        }
+    }
+
+    .name-rating-container {
+        width:100%;
+
+        .form-control {
+            @media (max-width: (@screen-xs-max )) {
+                max-width:125px;
+            }
+        }
+
+        .left {
+            width:55%;
+        }
+
+        .right {
+            width:45%;
+            text-align:right;
+        }
+    }
+
+    .btn-primary {
+        margin:0;
+    }
+
+    .error-message { 
+        color:#660000;
+        background-color:#ffe8e8;
+        padding:10px;
+    }
+
+    .fa-bullhorn {
+        margin-bottom:10px;
+    }
+
+    .link-button {
+        color:#03e0bc;
+        cursor:pointer;
+    }
+}
+
+.feedback-hero-icon {
+    width:100%;
+
+    i {
+        margin: 0 auto 10px auto;
+    }
+}
+
+.feedback-editor-button {
+    padding:5px;
+    background-color:#ccc;
+
+    &.active {
+        background-color:#03e0bc;
+    }
+}
+
+.error-message {
+    h1 {
+        font-size:18px;
+    }
+}
+
+.cet-feedback-header {
+    color: @text-color;
+    font-size: 14px;
+} 
+
+.cet-feedback-error {
+    color: @error-color;
+    font-size: 12px;
+}

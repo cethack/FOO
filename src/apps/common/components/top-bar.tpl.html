@@ -1,0 +1,24 @@
+<div class="top-bar">
+  <div *ngIf="isAuthenticated" class="menu-icon">
+    <i class="material-icons pointer-cursor bottom-aligned"
+      (click)="menu.showMenu = true"
+      id="topbar-menu">
+      menu
+    </i>
+  </div>
+  <div class="title">
+    <h3>{{title}}</h3>
+  </div>
+  <div *ngIf="isAuthenticated" class="right-side">
+		  <i [style.display]="showReloadIcon?'inline':'none'"
+        (click)="reloadPartList()"
+        class="refresh-icon material-icons pointer-cursor bottom-aligned">
+        cached
+      </i>
+      <span *ngIf="user.tokenData.tokenInfo"
+        class="username hidden-xs"
+        id="topbar-user-name"
+        >{{user.tokenData.tokenInfo.givenName}} {{user.tokenData.tokenInfo.surname}}</span>
+  </div>
+</div>
+<div class="filler"></div>

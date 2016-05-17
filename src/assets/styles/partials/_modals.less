@@ -1,0 +1,212 @@
+.modal {
+    background-color:fade(@body-bg, 50%);
+
+    > .modal-dialog {
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        top: 50%;
+        margin-top: -176px;
+        -moz-transform: translate(0, 50% 0) !important;
+        -ms-transform: translate(0, 50% 0) !important;
+        -o-transform: translate(0, 50% 0) !important;
+        -webkit-transform: translate(0, 50% 0) !important;
+        transform: translate(0, 50% 0) !important;
+
+        @media (min-width: @screen-xs-max) {
+            margin-top: -181px;
+            width: 95%;
+            left: 2%;
+        }
+
+        @media (min-width: @screen-md-max) {
+            width: 70%;
+            left: 15%;
+        }
+
+        .required-indicator {
+            color: red;
+        }
+    }
+}
+
+.modal-header {
+    margin-top: 15px;
+    border-bottom: none;
+    padding-bottom: none;
+
+    i {
+        float: left;
+        padding-right: 15px;
+    }
+
+    &.retry {
+        text-align: right;
+        margin-top: 0;
+    }
+
+    &.version-info {
+        font-weight: bold;
+    }
+
+    .close-button {
+        position: absolute;
+        right: 25px;
+
+        @media (max-width: 480px) {
+            right: 0;
+        }
+    }
+}
+
+.modal-title {
+    font-size: 24px;
+
+    @media (min-width: @screen-sm-min) {
+        font-size: 32px;
+    }
+}
+
+.modal-body {
+    padding-bottom: 5px;
+    
+    &.approve, &.decline {
+        padding-left: 80px;
+        padding-right: 80px;
+
+        @media(max-width: 750px) {
+            padding-left: 60px;
+            padding-right: 20px;
+        }
+    }
+
+    &.retry {
+        text-align: center;
+        padding: 0;
+
+        .cetaris-logo {
+            float: none;
+        }
+    }
+
+    &.version-info {
+        span:first-child {
+            width: 150px;
+            display: inline-block;
+            font-size: 12px;
+        }
+    }
+
+    .cetaris-logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .remark-wrapper {
+        .remark {
+            float: left;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+    }
+
+    form {
+        clear: both;
+    }
+
+    .action-description {
+        margin-bottom: 0;
+    }
+}
+
+.modal-subtitle {
+    margin: -15px 0 15px 0;
+}
+
+.modal-instructions {
+    background: #fbfbfb;
+    padding: 15px 15px 5px 15px;
+
+    @media (min-width: @screen-lg-min) {
+        margin-left: 30px;
+    }
+}
+
+.modal-instructions-title {
+    margin-top: 0;
+}
+
+.modal-content {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.modal-strip {
+    width: 95%;
+    margin: 0 auto;
+
+    @media (min-width: @screen-xs) {
+        width: 90%;
+    }
+
+    @media (min-width: @screen-lg-min) {
+        &.version-info {
+            width: 80%;
+        }
+    }
+}
+
+.modal-footer {
+    border-top: none;
+    margin-bottom: 10px;
+    padding: 0 10px 20px 10px;
+
+    a {
+        margin-right: 20px;
+    }
+
+    .btn-primary, .btn-default {
+        margin-top: -3px;
+    }
+
+    .btn-default.cancel {
+        margin-right: 0 !important;
+    }
+
+    .error-message {
+        display: inline-block;
+        text-align:left;
+        color: @error-color;
+    }
+
+    &.retry, &.version-info {
+        text-align: center;
+    }
+
+    .feedback-button {
+        position: relative; 
+        top: 12px;
+        color: @alert-color;
+        border: none; 
+        background-color: white; 
+        opacity: 0.7; 
+        z-index: 2000;
+        cursor: pointer;
+        height: 55px;
+
+        :hover {
+            color:  @brand-danger;
+            font-size: 30px;
+        }
+    }
+
+    .same-asset-pos {
+        color: red;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+}
+
+.modal-backdrop {
+    background-color: @white;
+}

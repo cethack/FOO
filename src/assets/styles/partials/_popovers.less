@@ -1,0 +1,122 @@
+.popover-fade {
+    &.ng-hide {
+      opacity: 0;
+    }
+
+    &.ng-hide-remove,
+    &.ng-hide-add {
+      display: block !important;
+    }
+
+    &.ng-hide-remove {
+      transition: all linear 300ms;
+    }
+
+    &.ng-hide-add {
+      transition: all linear 300ms;
+    }
+}
+
+// Popover 'buttons' are really just links but because they are sometimes nested in other links we need to use a button
+.btn-popover {
+    margin: -1px 0 2px 0;
+    padding: 0;
+    background: none;
+    line-height: 1.25;
+    color: @link-color;
+    text-shadow: none;
+    box-shadow: none;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+
+    pointer-events:all;
+
+    &:hover {
+        background: none;
+        color: @link-hover-color;
+        text-decoration: underline;
+        cursor:pointer;
+    }
+
+    &:active, &:focus {
+        padding-top: 0;
+        margin: -2px 0 2px 0;
+        background: none;
+        box-shadow: none;
+        color: @link-color;
+    }
+}
+
+.popover-icon {
+    width:40px;
+}
+
+.popover {
+    padding: 0;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 1px rgba(0, 0, 0, 0.4);
+    display:block;
+
+    &.right > .arrow {
+        left: -14px !important;
+    }
+
+    &.left > .arrow {
+        right: -14px !important;
+    }
+
+    &.bottom > .arrow {
+        top: -14px !important;
+    }
+
+    &.top > .arrow {
+        bottom: -14px !important;
+    }
+}
+
+.popover-content {
+    background: #fff;
+    color: #000;
+
+    div {
+            display: -ms-flex;
+            display: -webkit-flex;
+            display: flex;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            align-items: center;
+            text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            display: inline;
+
+            @media (min-width: @screen-sm-min) {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    i {
+        margin-right: 10px;
+    }
+}
+
+.popover-title {
+    font-size: 13px;
+    color: #fff;
+    border-bottom: 0;
+    width: 100%;
+
+    @media (min-width: @screen-sm-min) {
+        font-size: 15px;
+    }
+}
