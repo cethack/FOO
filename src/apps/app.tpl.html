@@ -1,0 +1,30 @@
+<top-bar></top-bar>
+
+<div class="container ui-view-container">
+  <div class="row">
+    <div class="main-view">
+      <cet-router-outlet>
+      </cet-router-outlet>
+    </div>
+  </div>
+</div>
+
+<!--- the following is page-blocking level components -->
+<popup></popup>
+
+<menu [style.display]="menu.showMenu ? '' : 'none'"></menu>
+
+<!-- This is to show login blocker when session is expired -->
+<!--<div id="session-expired-login"
+  class="cet-blocker full-width"
+  [style.display]= "sessionExpiredByTimer ? '' : 'none'">
+  <div  class="cet-view-container">
+    <cet-login></cet-login>
+  </div>
+</div>-->
+
+<!-- This is to show when http call is in progress -->
+<div id="http-spinner" class="cet-blocker"
+ [style.display]="httpInProgress ? '':'none'">
+ <i class="fa fa-spinner fa-spin fa-5x" style="position: relative; top: 0; left: 0"></i>
+</div>

@@ -1,0 +1,136 @@
+.container {
+    position: relative;
+    min-width: 320px !important;
+}
+
+.loader {
+    margin-top: 20%;
+}
+
+.full-width{
+  width:100%;
+}
+
+.sub-view-rh {
+    position: relative;
+    padding-left: 0;
+}
+
+.panel {
+    &-heading,
+    &-footer {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+.menu-container {
+    width: 100%;
+    position: relative;
+}
+
+.main-view {
+    margin-top: 0;
+
+    @media (min-width: @screen-sm-min) {
+        margin-top: 15px;
+    }
+}
+
+#po-detail-container {
+    overflow-y: auto;
+}
+
+.ui-view-container {
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    overflow-x:visible;
+    max-width: 1170px;
+    margin-top:80px;
+    margin-bottom:55px;
+    padding:0;
+
+    @media (min-width: @screen-sm-max) {
+        margin-bottom: 70px;
+    }
+
+    .row {
+        top:0;
+        bottom:0;
+        right:0;
+        left:0;
+        margin:0;
+        overflow-x:visible;
+
+        .main-view {
+            position: absolute;
+            top:0;
+            bottom:0;
+            right:0;
+            left:0;
+            margin:0;
+            overflow-x:visible;
+
+            .main-view-content {
+                max-height:100%;
+                padding-top: 5px;
+                overflow-y:auto;
+                -webkit-overflow-scrolling: touch;
+                overflow-x:visible;
+                height:100%;
+
+                @media (min-width: @screen-sm-max) {
+                    padding-top: 5px;
+                }
+                @media (max-width: (@screen-xs-max )) {
+                    padding-top: 5px;
+                    padding-left: 3px;
+
+                    &.po-container {
+                        padding-right: 3px !important;
+                    }
+                }
+
+                &.hidden-overflow {
+                    overflow-y: hidden;
+                }
+            }
+        }
+    }
+}
+
+/* screen blocker NOT to enable clicking on top/bottom component*/
+.cet-blocker {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(128, 128, 128, 0.7);
+  z-index: 1003;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .cet-view-container {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 0;
+    width: 400px;
+    max-width: 75%;
+    .error-message {
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .cet-view-container {
+      max-width: 75%;
+    }
+  }
+
+
+}

@@ -1,0 +1,56 @@
+.top-bar {
+  position: fixed;
+  font-family: open_sanssemibold, arial, sans-serif;
+  height: 80px;
+  background: #394555;
+  -webkit-box-shadow: 0px 2px 4px 0px rbga(0,0,0,0.3);
+  -moz-box-shadow: 0px 2px 4px 0px rbga(0,0,0,0.3);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+  color: #fff;
+  padding: 15px 12px;
+  display: table;
+  width: 100%;
+  z-index: 1;
+}
+
+.top-bar .menu-icon {
+  display: table-cell;
+  vertical-align: bottom;
+  font-size: 17px;
+  width: 32.5%;
+}
+
+.top-bar .title {
+  display: table-cell;
+  width: 35%;
+  text-align: center;
+  vertical-align: bottom;
+  font-size: 17px;
+}
+
+.top-bar .title h3 {
+  margin: 0;
+}
+
+.top-bar .right-side {
+  display: table-cell;
+  vertical-align: bottom;
+  text-align: right;
+  font-size: 17px;
+  width: 32.5%;
+
+  >i {
+    @media( width: 320px){
+      float:right;
+    }
+  }
+}
+
+.top-bar .right-side .material-icons {
+  vertical-align: top;
+}
+
+.top-bar + .filler {
+  height: 80px;
+}
+

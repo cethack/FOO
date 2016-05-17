@@ -1,0 +1,34 @@
+<div id="messages" style="display:none">
+  <l id="TEST-MSG">Test Message</l>
+  <l id="ERROR">Error</l>
+  <l id="R-U-SURE">Are you sure?</l>
+  <l id="CANCEL-CLOCK-ON">Cancel Clock On</l>
+</div>
+
+<div>
+  <div *ngIf="titleId" class="header">
+    <h3 class="title">{{ getTranslated(titleId) }}</h3>
+  </div>
+
+  <div *ngIf="message || messageId" class="message">
+   <h3> {{ message || getTranslated(messageId) }} </h3>
+  </div>
+
+
+  <div *ngIf="buttons" class="footer">
+
+    <button *ngIf="buttons.cancel"
+      class="cancel"
+      type="button"
+      (click)="cancel()">
+      Cancel
+    </button>
+
+    <button *ngIf="buttons.ok"
+      class="ok"
+      type="button"
+      (click)="ok()">
+      OK
+    </button>
+  </div>
+</div>

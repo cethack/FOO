@@ -1,0 +1,128 @@
+.ng-valid[required] {
+  border-left: 5px solid #42A948;
+}
+
+.ng-invalid {
+  border-left: 5px solid #a94442;
+}
+
+body {
+    overflow: hidden;
+    background: @body-bg;
+    // This fixes the 'default overlay scrollbar' in IE10+ */
+    -ms-overflow-style: scrollbar;
+}
+
+.star-rating {
+    margin: 0;
+    padding: 0 0 0 5px;
+    float: right;
+
+    i {
+        margin-left: 5px;
+    }
+}
+
+a {
+    div {
+        display: table-cell;
+        vertical-align: middle
+    }
+}
+
+.full-height {
+    height:100%;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+    padding-right:5px;
+    padding-left:5px;
+}
+
+h3 {
+    @media (max-width: (@screen-xs-max )) {
+            display: inline-block;
+            margin-bottom:0;
+            margin-top:0;
+    }
+}
+
+.hide-ms-clear::-ms-clear { // hides the close X button on textbox in IE10+, see http://jwcooney.com/2013/11/04/fixing-ie-10-text-box-x-and-sizing-issues/
+    display:none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+   color: #cccccc;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #cccccc;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #cccccc;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color: #cccccc;
+}
+
+.remark-wrapper {
+    .remark {
+        max-width: 85%;
+    }
+
+    &.no-overflow {
+        .remark {
+            white-space: normal;
+        }
+    }
+
+}
+
+.more-remark {
+    float: right;
+    color: #007b98;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.clear {
+    clear:both;
+}
+
+.left {
+    position:relative; float:left;
+}
+
+.right {
+    position:relative;
+    float:right;
+}
+
+.error-message {
+    text-align: left;
+    color: salmon;
+}
+
+.cet-alert-center {
+    color: @error-color;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 20px;
+}
+
+.close-button {
+    color: @alert-color;
+    border: none;
+    background-color: white;
+    width: 30px;
+    font-size: 26px;
+    opacity: 0.5;
+    z-index: 2000;
+    cursor: pointer;
+
+    :hover {
+        font-size: 30px;
+    }
+}

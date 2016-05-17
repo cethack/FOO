@@ -1,0 +1,158 @@
+infinite-list {
+  .load-more {
+    text-align: center;
+    background-color: #f0f0f0;
+
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+
+.list-group {
+  position: absolute;
+  width: 100%;
+}
+
+.search-container {
+  width: 100%;
+}
+
+.search-box {
+  width: 100%;
+}
+
+.list-view {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin-top: 5px;
+  overflow-y: hidden;
+
+  > section {
+    height: 100%;
+    overflow-y: auto;
+
+    &.list-group {
+      box-shadow: none;
+      border-bottom: none;
+    }
+  }
+}
+
+.count {
+  font-size: 16px;
+
+  &.badge {
+    padding: 3px 5px 3px 3px !important;
+    background-color: #007b98 !important;
+    min-width: 37px;
+  }
+}
+
+.count-badge {
+  padding-right: 10px;
+
+  @media(min-width:@screen-md) {
+    padding-right: 30px;
+  }
+
+  @media(min-width:@screen-sm) {
+    padding-right: 0px;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 7px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 2.0;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #005265;
+    border-radius: 18px;
+  }
+}
+
+.cet-hl-field {
+  background-color: lightyellow !important;
+}
+
+.cet-hl-match {
+  background-color: #ffea00 !important;
+}
+
+.cet-searchbox {
+  position: relative;
+  z-index: 100;
+  padding: 0 50px 0 20px;
+  font-size: 20px;
+}
+
+.cet-searchbox-left-icon {
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  z-index: 200;
+  color: #aaaaaa;
+}
+
+.cet-searchbox-right-icon {
+  position: absolute;
+  display: block;
+  padding: 0 10px 0 15px;
+  right: 6px;
+  top: 4px;
+  z-index: 1000;
+  color: salmon;
+  cursor: pointer;
+}
+
+.cet-searchbox-container {
+  width: 100%;
+  position: relative;
+  white-space: nowrap;
+}
+
+.cet-square-image {
+  display: inline-block;
+  padding: 14px;
+  border-radius: 5px;
+  border: 2px solid;
+  font-size: 26px;
+  width: 58px;
+  float: right;
+}
+
+.cet-font-size-18{
+  font-size:18px;
+}
+.cet-part-discription {
+  width: 60%;
+  font-size: 17px;
+}
+
+.cet-part-flags-div {
+  width: 40%;
+}
+
+.cet-noresize{
+  resize: none;
+}
+
+.cet-height-44{
+  height: 44px;
+}
+
+.cet-big-icon{
+  font-size: 35px;
+}
+
+.cet-break-word{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}

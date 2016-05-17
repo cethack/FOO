@@ -1,0 +1,22 @@
+# Files to ignore 
+
+bin
+obj
+node_modules
+build
+package
+server
+typings
+.vs
+.vscode
+.idea
+
+*.js
+*.map
+
+config.json
+
+_results
+test
+src.csproj.user
+coverage

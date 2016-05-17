@@ -1,0 +1,85 @@
+<div class="login" [ngClass]="{
+     'logged-in': user.username,
+     'session-expired' : user.sessionExpiredUsername && user.sessionExpiredByTimer
+   }">
+  <div class="logo" [style.display]="user.sessionExpiredByTimer ? 'none': ''">
+    <img src="assets/images/cetaris-logo.png" />
+    <div><i>Fleet Assistant</i></div>
+  </div>
+  <form novalidate autocomplete="off">
+    <div class="title hidden-xs" [style.display]="user.sessionExpiredByTimer ? 'none': ''">
+      Login
+    </div>
+    <div class="error-message" [style.display]="user.sessionExpiredByTimer ? '': 'none'">
+      Session expired, Please login again.
+    </div>
+    <div class="email input-wrapper">
+      <i class="material-icons">person</i>
+      <input
+        id="username"
+        autofocus
+        name="username"
+        (keydown)="ignoreSpace($event)"
+        placeholder="Email Address"
+        #username
+        cet-trim
+        [value]="user.sessionExpiredByTimer ? user.sessionExpiredUsername : ''"
+        [disabled]="user.sessionExpiredUsername && user.sessionExpiredByTimer"
+        required />
+    </div>
+    <div class="password input-wrapper">
+      <i class="material-icons">lock</i>
+      <input id="password" type="password"
+         #password
+         autofocus
+         autocomplete="off"
+         placeholder="Password"
+         value=""
+         required />
+    </div>
+    <div>
+      <span id="errorMessage" class="error-message">{{ message }}</span>
+    </div>
+    <div class="submit">
+      <button id="login-button"
+        (click)="doLogin(username.value, password.value)"
+        [disabled]="loginFormDisabled">
+        Login
+      </button>
+    </div>
+  </form>
+</div>
+<!-- @TODO remove this later. Keeping this to make just in case for a while
+<div class="col-sm-12">
+    <div class="col-sm-10 login-form-container">
+      <form role="form" name="loginForm" class="login-form" novalidate autocomplete="off">
+        <div>
+          <div class="form-group">
+            <i class="fa fa-2x fa-user"></i>
+            <input id="username" type="text" autofocus #username
+              class="form-control username-control"
+              autocomplete="off"
+              placeholder="Username"
+              (keydown)="ignoreSpace($event)"
+              [value]="user.sessionExpiredByTimer ? user.sessionExpiredUsername : ''"
+              [disabled]="user.sessionExpiredUsername && user.sessionExpiredByTimer"
+              required />
+          </div>
+          <div class="form-group">
+            <i class="fa fa-2x fa-lock"></i>
+            <input id="password" type="password" #password
+              autocomplete="off"
+              class="form-control password-control"
+              placeholder="Password"
+              value=""
+              required />
+          </div>
+          <button id="cetLoginForm-Submit" type="submit" class="btn btn-primary"
+            (click)="doLogin(username.value, password.value)"
+            [disabled]="loginFormDisabled">Login
+          </button>
+        </div>
+      </form>
+    </div>
+</div>
+-->

@@ -1,0 +1,5 @@
+﻿{
+  "apiBaseUrl": "http://valm.actcosys.com/Nightly_WfaFarApi/api",
+  "TOKEN_REFRESH_MINS": 5,
+  "TOKEN_EXPIRY_MINS": 10
+}

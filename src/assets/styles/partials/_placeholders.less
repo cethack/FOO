@@ -1,0 +1,26 @@
+﻿// Placeholders differ from mixins in that they do not repeat themeselves throught-out
+// the css, instead, they collect all the elements they are applied to in one single
+// combined selector. Use placeholders with :extend (i.e, navbar { &:extend(.basic-transiton); }
+
+// The best way to choose whether or not to use a mixin or placeholder is to ask: does the
+// construct need to accept a parameter? If it does, use a mixin. Otherwise, extend a placeholder.
+
+
+// Basic transition used throughout Cetaris applications
+.basic-transition {
+    .transition(ease-out all 0.2s);
+}
+
+// Adds ellipsis for content in a shrinking container
+.truncate {
+    width: 85%;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    @media (min-width: @screen-sm-min) {
+        width: 100%;
+    }
+}

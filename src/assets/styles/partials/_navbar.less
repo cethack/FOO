@@ -1,0 +1,217 @@
+.navbar {
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    border: 0;
+    z-index: 1001;
+    border-bottom: 3px solid @logo-left;
+
+    i {
+        &.circle {
+            padding: 4px 5px 3px 5px;
+            border-radius: 100px;
+            border: 2px solid #fff;
+            font-size: 18px;
+            background: #000;
+        }
+
+        &.fa-circle.circle {
+            padding: 1px 2px;
+            margin-top: 1px;
+            background: #fff;
+            border: 3px solid #999;
+            font-size: 21px;
+        }
+    }
+
+
+    a.disabled {
+        i {
+            &.circle {
+                color: @gray;
+                border: 2px solid @gray;
+            }
+            &.fa-circle.circle {
+                background: @gray;
+                font-size: 21px;
+                border: 3px solid #333;
+            }
+        }
+    }
+}
+
+.navbar-nav.pull-left {
+    margin-left: 15px;
+
+    li {
+        border-left: 1px solid #404040;
+    }
+}
+
+.navbar-nav {
+    white-space: nowrap;
+
+    &.pull-left {
+        margin-left: 15px;
+
+        li {
+            border-left: 1px solid #404040;
+        }
+    }
+
+    @media (min-width: @screen-sm-min) {
+        float: right;
+        margin-right: -10px;
+
+        li:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            height: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.35);
+            .transition (all 0.6s);
+        }
+
+        li.active:after {
+            height: 4px;
+        }
+
+        &.pull-left {
+            li.active, li.active + li {
+                border-left: 1px solid #222 !important;
+            }
+        }
+    }
+
+    .utility {
+        a {
+            color: @link-color !important;
+        }
+
+        i {
+            margin: 3px 0 0 8px;
+        }
+
+        ul {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: @gray-darker;
+            margin: 0;
+            border-top: 3px solid @brand-primary;
+            padding: 0;
+            list-style-type: none;
+            &:extend(.basic-transition);
+
+            &.open {
+                width: 120px;
+                display: block;
+            }
+
+            li {
+                float: left;
+                width: 100%;
+                display: block;
+                border-top: 1px solid #444;
+
+                &:first-child {
+                    border-top: none;
+                }
+
+                a {
+                    font-size: 13px;
+                    display: inline-block;
+                    width: 100%;
+                    padding: 0 10px;
+                    line-height: 40px;
+
+                    &:hover {
+                        background: #3c3c3c;
+                        text-decoration: none;
+                        color: @white !important;
+                    }
+                }
+
+                i {
+                    float: left;
+                    color: #fff;
+                    padding: 11px 10px 0 0;
+                }
+            }
+        }
+    }
+}
+
+.navbar-brand {
+    max-width: 160px;
+    overflow: hidden;
+    padding: 0;
+    display: inline-block;
+    float: left;
+    font-size: 16px;
+    color: #eee !important;
+    line-height: 51px;
+    text-transform: uppercase;
+    font-weight: @font-bold;
+    margin-left: 0 !important;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.nav-pills {
+    li {
+        margin: 0 10px 10px 0;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    a {
+        padding: 5px 10px !important;
+        border-radius: 10px !important;
+        font-size: 13px !important;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    > li {
+        &.active > a > .badge {
+            background-color: transparent;
+            border: none;
+            color: inherit;
+            font-size: inherit;
+        }
+
+        > a > .badge {
+            background-color: transparent;
+            border: none;
+            color: inherit;
+            font-weight: inherit;
+            font-size: inherit;
+            padding: 0;
+            &:before {
+                content:"[";
+            }
+            &:after {
+                content:"]";
+            }
+        }
+
+        > a {
+            border-radius:0 !important;
+        }
+    }
+}
+
+.navbar-div{
+  margin:12px;
+  font-size:27px;
+  color:#fff;
+  cursor:pointer;
+}

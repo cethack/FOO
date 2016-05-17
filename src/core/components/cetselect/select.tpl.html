@@ -1,0 +1,33 @@
+<div tabindex="0" class="cet-select-bootstrap dropdown open">
+
+  <input type="text" tabindex="1" autocomplete="off"
+    class="form-control cet-select-input"
+    [required]="isRequired"
+    [disabled]="disabled"
+    [value]="(selectedItem && selectedItem.displayText)||''"
+    [class.ng-invalid]="isRequired && !inputEl.value"
+    [class.ng-valid]="isRequired && inputEl.value"
+    (focusin)="processFocusIn($event)"
+    (click)="processFocusIn($event)"
+    (keyup)="processKeyup($event)"
+    (keydown)="processKeydown($event)"
+    placeholder="{{inputEl.value.length ? '' : placeholder}}" #inputEl/>
+
+  <ul *ngIf="itemsOpened"
+    class="cet-select-items cet-select-items-content dropdown-menu">
+
+    <li>
+      <div *ngFor="let item of filteredItems | slice:0:10"
+        class="cet-select-items-row"
+        [class.activeItem]="isActiveItem(item)"
+        (mouseenter)="setActiveItem(item)"
+        (click)="setSelectedItem($event, item)">
+
+        <a href="javascript:void(0)" class="dropdown-item">
+          <div [innerHtml]="item.displayText | cetHighlight:searchTerm"></div>
+        </a>
+      </div>
+    </li>
+  </ul>
+
+</div>

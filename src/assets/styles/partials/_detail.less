@@ -1,0 +1,304 @@
+.detail-infinite-list-container {
+    padding-top: 15px;
+    overflow-y: auto;
+
+    .list-container {
+        &.list-group {
+            box-shadow:none;
+            border-bottom: none;
+        }
+    }
+}
+
+.po-detail {
+    .btn-back {
+        padding-left:0;
+    }
+
+    .po-total {
+        margin-top: 20px;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    .po-summary-text {
+        margin-top: 10px;
+        word-wrap: break-word;
+    }
+
+    .po-number , .list-item-heading-left{
+        margin-top: 20px;
+        float: left;
+        margin-bottom: 0 !important;
+    } 
+
+    .po-total {
+        float: right;
+    }
+
+    .po-supplier {
+        margin: 0;
+        float: left;
+        width: 70%;
+    }
+
+    .po-supplier-location {
+        text-transform: none;
+        font-weight: normal;
+        margin-top: 2px;
+        margin-bottom: 5px;
+        color: #555;
+        font-size: 14px;
+        clear: both;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        
+        @media (min-width: @screen-xs-max) {
+        }
+    }
+
+    .nav {
+        padding: 0;
+    }
+
+    header {
+        margin-top: -20px;
+
+        .banner {
+            clear: both;
+
+            .po-supplier-location {
+                color: white;
+            }
+
+            &.danger {
+                background: -webkit-linear-gradient(left,rgba(191,36,37,1), rgba(191,36,37,0.8), rgba(191,36,37,0.5), rgba(255,0,0,0.35)); /*Safari 5.1-6*/
+                background: -o-linear-gradient(right,rgba(191,36,37,1), rgba(191,36,37,0.8), rgba(191,36,37,0.5), rgba(255,0,0,0.35)); /*Opera 11.1-12*/
+                background: -moz-linear-gradient(right,rgba(191,36,37,1), rgba(191,36,37,0.8), rgba(191,36,37,0.5), rgba(255,0,0,0.35)); /*Fx 3.6-15*/
+                background: linear-gradient(to right, rgba(191,36,37,1), rgba(191,36,37,0.8), rgba(191,36,37,0.5), rgba(255,0,0,0.35)); /*Standard*/
+            }
+
+            &.warning {
+                background: -webkit-linear-gradient(left,#03418D, rgba(20, 76, 189, 0.85), rgba(16, 78, 202, 0.53), rgba(10, 64, 173, 0.44)); /*Safari 5.1-6*/
+                background: -o-linear-gradient(right,#03418D, rgba(20, 76, 189, 0.85), rgba(16, 78, 202, 0.53), rgba(10, 64, 173, 0.44)); /*Opera 11.1-12*/
+                background: -moz-linear-gradient(right,#03418D, rgba(20, 76, 189, 0.85), rgba(16, 78, 202, 0.53), rgba(10, 64, 173, 0.44)); /*Fx 3.6-15*/
+                background: linear-gradient(to right, #03418D, rgba(20, 76, 189, 0.85), rgba(16, 78, 202, 0.53), rgba(10, 64, 173, 0.44)); /*Standard*/
+            }
+
+            &.general {
+                background: -webkit-linear-gradient(left,#03418D, rgba(20, 76, 189, 0.85), rgba(16, 78, 202, 0.53), rgba(10, 64, 173, 0.44)); /*Safari 5.1-6*/
+                background: -o-linear-gradient(right,#03418D, rgba(20, 76, 189, 0.85), rgba(16, 78, 202, 0.53), rgba(10, 64, 173, 0.44)); /*Opera 11.1-12*/
+                background: -moz-linear-gradient(right,#03418D, rgba(20, 76, 189, 0.85), rgba(16, 78, 202, 0.53), rgba(10, 64, 173, 0.44)); /*Fx 3.6-15*/
+                background: linear-gradient(to right, #03418D, rgba(20, 76, 189, 0.85), rgba(16, 78, 202, 0.53), rgba(10, 64, 173, 0.44)); /*Standard*/
+            }
+        }
+
+        a + .row {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .row + .row {
+            margin-top: -5px;
+        }
+
+        .supplier-rate {
+            margin-top: 5px !important;
+            color: white;
+        }
+
+        .indicators {
+            position: relative;
+            top: -6px;
+        }
+    }
+
+    main {
+        clear: both;
+        margin-top: 10px;
+    }
+
+    @media(min-width: @screen-sm-min) {
+        margin-top: -20px;
+    }
+
+    .list-group-content {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    h5 {
+        &.list-group-item-heading {
+            float: left;
+            max-width: 50%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.detail-history-tab {
+    .list-group {
+        position: relative;
+    }
+
+    .list-group-icon {
+        background: #005265;
+    }
+
+    .list-group-content {
+        padding-left: 10px;
+
+        .list-group-item-heading:first-child {
+            max-width: 55%;
+        }
+
+        .badge {
+            float:left;
+            font-size: 10px;
+            padding: 3px 4px;
+        }
+    }
+
+    .list-group-item-line {
+        &.remark {
+            max-width: 85%;
+        }
+    }
+
+    .more-remark {
+        position: absolute;
+        top: 53px;
+        right: 10px;
+    }
+}
+
+.repair-detail {
+    position: relative;
+    
+    .repair-header {
+        margin-top: 10px;
+        width: 100%;
+
+        .repair-line-description {
+            max-width: 90%;
+        }
+
+        .row {
+            float: right;
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: 1.2em;
+        }
+    }
+
+    .repair-list-return {
+        float:right;
+        div {
+            display: inline-block; 
+            vertical-align: middle;
+        }
+    }
+    .repair-line-title {
+        float:left;
+    }
+    
+    hr {
+        border: none;
+        height: 1px;
+        background: #fff;
+    }
+    
+    .fa-chevron-up { 
+        margin-right: 5px;
+        font-size: 1.5em;
+        opacity: 0.7;
+    }
+
+    .parts-labor-list {
+        .list-group-item-line {
+            span {
+                display:block;
+                max-width: 65%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                float: left;
+            }
+        }
+    }
+
+    .repair-line-indicators {
+        float: left;
+        margin-right: 5px;
+    }
+}
+
+.po-detail-placeholder {
+    position: absolute;
+    top:65px;
+    right:0;
+    left:0;
+    text-align: center;
+    padding: 25% 0;
+    border: 1px solid #ddd;
+    background: #fbfbfb;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.parts-labor-detail {
+    position: relative;
+
+    .parts-header {
+        margin-top: 5px;
+
+        .part-description {
+            float: left;
+            max-width: 100%;
+        }
+        .btn {
+            float: right;
+            margin-left: 5px;
+        }
+
+        .warranty-indicators {
+            margin-right: 5px;
+        }
+
+        .fa-chevron-up { 
+            margin-right: 5px;
+            font-size: 1.5em;
+            opacity: 0.7;
+        }
+    }
+
+    .parts-labor-list-return {
+        float:right;
+        div {
+            display: inline-block; 
+            vertical-align: middle;
+        }
+    }
+
+    .part-labor-item-number {
+        float:left;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .part-item {
+        p {
+            width: 90%;
+        }    
+
+        .row.labor {
+            float: right;
+        }
+    }
+}

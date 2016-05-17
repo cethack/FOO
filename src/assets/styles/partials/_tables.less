@@ -1,0 +1,35 @@
+.table {
+    font-size: 13px;
+
+    a {
+        text-decoration: none;
+    }
+
+    td, th {
+        text-align: left !important;
+    }
+
+    @media (min-width: @screen-md-min) {
+        font-size: 14px;
+    }
+
+    tbody tr:first-child > td {
+        border-top: 0;
+    }
+
+    tr.total-group {
+        border-top: 2px solid @gray;
+
+        &.total {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+    }
+}
+
+// Two column tables look nicer when column 2 is aligned to the right
+.table-2col {
+    tr > td + td, tr > th + th {
+        text-align: right !important;
+    }
+}

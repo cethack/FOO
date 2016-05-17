@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="./">
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1,maximum-scale=1,user-scalable=0">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <!--<link rel="manifest" href="manifest.json">-->
+  <meta name="application-name" content="Work Order">
+
+  <title>FOO - Fleet Of One</title>
+
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link rel="stylesheet" type="text/css" href="assets/vendors/Font-Awesome/css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="assets/vendors/open-sans/css/open-sans.min.css" />
+  <link rel="stylesheet" type="text/css" href="assets/vendors/material-design-icons/material-icons.css" />
+  <link rel="stylesheet" type="text/css" href="assets/vendors/animate/animate.css" />
+  <link rel="stylesheet" type="text/css" href="assets/styles/app.css" />
+  <link rel="stylesheet" type="text/css" href="assets/styles/styles.css">
+
+  <!-- shims:js -->
+  <script src="lib/system-polyfills.src.js"></script>
+  <script src="lib/es6-shim.js"></script>
+  <script src="lib/system.src.js"></script>
+  <script src="lib/angular2-polyfills.js"></script>
+  <script src="lib/Reflect.js"></script>
+  <script src="lib/Intl.min.js"></script>
+  <script src="lib/en.js"></script>
+  <!-- endinject -->
+
+  <script src="lib/lodash.js"></script>
+  <script>
+    System.config({
+      "defaultJSExtensions":true,
+      "paths": {
+        "bootstrap":"bootstrap",
+        "lodash": "lib/lodash.js"
+      }
+    })
+  </script>
+
+  <script src="lib/Rx.min.js"></script>
+  <script src="lib/angular2.js"></script>
+  <script src="lib/router.js"></script>
+  <script src="lib/http.min.js"></script>
+
+  <script>
+      var xhr = new XMLHttpRequest();
+      var url = 'config.json?v=' + (new Date()).getTime().toString();
+      xhr.open('get', url, true);
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+          if (xhr.status == 200) {
+            Cetaris = {};
+            Cetaris.configData = JSON.parse(xhr.responseText);
+
+            System.import('bootstrap').then(null, console.error.bind(console));
+          } else {
+            console.error('Cannot load config.json: ' + xhr.responseText);
+          }
+        }
+      };
+      xhr.send();
+  </script>
+  </head>
+  <body>
+
+    <cet-app>Loading...</cet-app>
+
+    <script>
+    // function.name (all IE)
+    // Remove once https://github.com/angular/angular/issues/6501 is fixed.
+    /*! @source http://stackoverflow.com/questions/6903762/function-name-not-supported-in-ie*/
+    if (!Object.hasOwnProperty('name')) {
+      Object.defineProperty(Function.prototype, 'name', {
+        get: function() {
+          var matches = this.toString().match(/^\s*function\s*(\S*)\s*\(/);
+          var name = matches && matches.length > 1 ? matches[1] : "";
+          // For better performance only parse once, and then cache the
+          // result through a new accessor for repeated access.
+          Object.defineProperty(this, 'name', {value: name});
+          return name;
+        }
+      });
+    }
+    </script>
+
+  </body>
+</html>

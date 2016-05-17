@@ -1,0 +1,222 @@
+
+//=== App Bar/ Top bar ====================================================================
+
+.appbar {
+  background: @gray-darker;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow-y: hidden;
+  font-size: 35px; //without circle
+  @media(min-width:@screen-xs) {
+    padding: 3px 0px 2px 0px;
+    height: 55px;
+  }
+
+  @media(min-width: @screen-md) {
+    padding-top: 10px;
+    height: 70px;
+  }
+
+  .appbar-currency {
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .dynamic-buttons {
+    bottom: 0;
+    position: relative;
+    opacity: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &.ng-hide {
+      bottom: -100%;
+      opacity: 0;
+    }
+  }
+
+  .ng-enter, .ng-move {
+    .transition(all ease-in-out 0.25s);
+
+    button {
+      position: relative;
+      .transition(all ease-in-out 0.25s);
+    }
+  }
+
+  .ng-enter.ng-enter-active,
+  .ng-leave {
+    button {
+      position: relative;
+      bottom: 0;
+    }
+  }
+
+  .ng-leave.ng-leave-active,
+  .ng-enter {
+    button {
+      position: relative;
+      bottom: -100%;
+    }
+  }
+
+
+  &.alerts {
+    border-top: 3px solid @logo-left;
+
+    .container {
+      margin-top: -2px;
+    }
+  }
+
+  i {
+    &.circle {
+      border: 2px solid @white;
+    }
+
+    &.no-circle {
+      line-height: 32px;
+      font-size: 32px;
+      border-color: transparent !important;
+    }
+  }
+
+  .badge {
+    background: limegreen;
+    color: black;
+    border-radius: 0;
+    right: 2px;
+    top: 0;
+    position: absolute;
+    width: 0;
+    min-width: 20px;
+    max-width: 25px;
+
+    @media (min-width: @screen-md-min) {
+      right: 15px;
+    }
+  }
+}
+
+.appbar-nav {
+  .label-disabled {
+    color: @gray !important;
+    cursor: default;
+  }
+
+  li {
+    height: 34px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    @media (min-width: @screen-md-min) {
+      height: 53px;
+    }
+
+    button {
+      padding: 1px 9px;
+      height: 100%;
+
+      @media (min-width: @screen-md-min) {
+        padding: 1px 31px;
+        height: 53px;
+      }
+    }
+
+    .no-circle {
+      line-height: 32px;
+      font-size: 32px;
+    }
+
+    i {
+      color: @white;
+    }
+
+    text-align: center;
+  }
+
+  button {
+    text-decoration: none;
+
+    i {
+      color: @white;
+
+      &.circle.disabled {
+        background: @gray-darker !important;
+        cursor: default !important;
+        border: 2px solid @gray !important;
+        color: @gray !important;
+      }
+    }
+
+    .label {
+      display: none;
+
+      @media (min-width: @screen-md-min) {
+        display: block;
+        font-size: 65%;
+        padding: 5px 0;
+      }
+    }
+
+    .disabled + .label {
+      color: @gray !important;
+      cursor: default;
+    }
+
+    &:hover {
+      i {
+        &.circle {
+          background: #000;
+        }
+
+        &.no-circle {
+          color: @gray-lighter;
+        }
+      }
+    }
+  }
+}
+
+
+.left-bottom-bar {
+  width: 20%;
+  color: white;
+}
+
+.right-bottom-bar {
+  width: 80%;
+  color: white;
+}
+
+
+.left-bottom-bar-botton {
+  float: left;
+  cursor:pointer;
+  @media(min-width: @screen-sm) {
+    float: left;
+    padding-left: 15px;
+  }
+}
+
+.right-bottom-bar-botton {
+  float: right;
+
+  @media(min-width: @screen-sm) {
+    float: right;
+  }
+
+  .right-bottom-bar-botton-icon{
+    float: right;
+    padding: 0 10px 0 10px;
+    cursor:pointer;
+     @media(min-width: @screen-sm) {
+        padding: 0 20px 0 20px;
+       }
+  }
+  
+}

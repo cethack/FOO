@@ -1,0 +1,49 @@
+<div class="page-blocker" cet-disable-ios-scroll [ngClass]="{'click-through': closed}">
+
+  <div class="menu animated" [ngClass]="closed ? 'slideOutLeft' : 'slideInLeft'">
+
+    <div class="title">
+      <h3 class="text">Fleet Assistant</h3>
+      <i (click)="closeMenu()"
+        class="menu-icon material-icons pointer-cursor">menu</i>
+    </div>
+
+    <div class="contents" cet-disable-ios-scroll>
+
+      <div class="group  pointer-cursor">
+        <div class="" (click)="goDashboard()">
+          <i class="material-icons">dashboard</i>
+          <span>Dashboard</span>
+        </div>
+        <div class="" (click)="goTaskList()">
+          <i class="material-icons">assignment</i>
+          <span>Task List</span>
+        </div>
+        <div class="" (click)="goTask1()">
+          <i class="material-icons">assignment</i>
+          <span>Task1</span>
+        </div>
+        <div class="" (click)="goTask2()">
+          <i class="material-icons">assignment</i>
+          <span>Task2</span>
+        </div>
+        <div class="" (click)="goTask3()">
+          <i class="material-icons">assignment</i>
+          <span>Task3</span>
+        </div>
+        <div class="" (click)="logout()">
+          <i class="material-icons">&#xe8ac;</i>
+          <span>Logout</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      <div>FOO &amp; Terms</div>
+      <div>V0.0.1</div>
+    </div>
+
+  </div>
+
+</div>

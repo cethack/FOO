@@ -1,0 +1,391 @@
+﻿// List Groups will be used extensively throughout the suite of Cetaris apps
+// Be sure to familiarize yourself with how they are structured ('approval-list/listShell.tpl.html'
+// is the best place to start). List Groups are actually a Bootstrap 3 creation that we
+// are extending in this LESS file.
+.list-group {
+    overflow-x: visible;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.075);
+    border-top:1px solid @list-group-active-border;
+}
+
+cet-list-group {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-y: visible;
+}
+
+// List-group-item
+//
+// List group items are the 'rows' (i.e., div or li) that is repeated within the .list-group container
+.list-group-item {
+    padding: 0;
+    background: @list-group-bg;
+    position:relative;
+    border-bottom: 1px solid #ddd;
+
+    > a {
+        color: @gray-dark;
+
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+    }
+
+    &:hover {
+        background: @list-group-hover-bg;
+        cursor: pointer;
+    }
+
+    &.danger {
+        .list-group-icon, .list-group-number
+        {
+            background: @alert-danger-bg;
+            border-color: @alert-danger-border;
+            color: @alert-danger-text
+        }
+    }
+
+    &.danger.active {
+        background-color: rgba(200, 56, 57, 0.35);
+    }
+
+    &.warning {
+        .list-group-icon, .list-group-number
+        {
+            background: @alert-warning-bg;
+            border-color: @alert-warning-border;
+            color: @alert-warning-text
+        }
+    }
+
+    &.warning.active {
+        background-color: rgba(48, 165, 233, 0.7); //rgba(252, 171, 112, 0.4);
+    }
+
+    &.general {
+        .list-group-icon, .list-group-number
+        {
+            background: @logo-left;
+            border-color: @alert-info-border;
+            color: @alert-info-text
+        }
+    }
+
+    &.general.active {
+        background-color: rgba(48, 165, 233, 0.7); //rgba(0, 127, 106, 0.25);
+    }
+
+    &.active {
+        color: @gray-dark;
+        z-index: initial;
+        &:hover {
+            color:inherit
+        }
+    }
+
+    .tooltip.right {
+        left: 3px !important;
+    }
+
+}
+
+.list-group-item-heading-container {
+    height: 0;
+
+    .indicators {
+        position: relative;
+        top: -4px;
+
+        &.badge {
+            font-size: 11px;
+            margin-right: -2px;
+            padding: 2px 3px 3px 3px !important;
+        }
+    }
+
+    .list-group-item-heading {
+        float: left;
+       // max-width: 60%;
+        white-space: nowrap;
+        margin-right: 5px;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+
+        &.po-number , &.list-item-heading-left {
+            text-overflow: unset;
+        }
+    }
+}
+
+// Wrapper class for the center portion of a list-group-item
+.list-group-content {
+    display: block;
+    padding: 10px 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// In the case where we don't want an icon or a line-number, add the list-group-item-left class
+.list-group-item-left .list-group-content {
+    margin-left: 0;
+}
+
+// List group items can have multiple lines of content themselves, each of which are wrapped with this class
+.list-group-item-line {
+     &:extend(.truncate);
+    clear: both;
+    margin: 4px 0 0 0;
+    width: 100%;
+    line-height: 1.25;
+    color: @gray;
+
+    &.remark {
+        max-width: 85%;
+    }
+
+    > .link {
+        display: block;
+
+        @media (min-width: (@screen-xs-min + 1)) {
+            display: inline-block;
+        }
+    }
+    .pull-left {
+        max-width: 35%;
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .pull-right {
+        max-width: 65%;
+        white-space: nowrap;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .supplier-name {
+        float: left;
+        max-width: 60%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &.full-width {
+            max-width: 90%;
+        }
+
+        &.short-width {
+            max-width: 45% !important;
+        }
+
+    }
+
+    .supplier-name.full {
+        max-width: 100% !important;
+    }
+
+    .asset-number {
+        float: right;
+    }
+}
+
+// list-group-item-info is a piece of information (like a Purchase Order value) that is floated in the
+// upper right-hand corner of the main content area. Also including the .badge class styles it like.... a badge, silly!
+.list-group-item-info, .list-group-item-warning, .list-group-item-danger {
+    margin: 0;
+    font-weight: @font-bold;
+    background: none;
+    color: @gray-darker;
+    float: right;
+
+    &.badge {
+        padding: 5px 8px;
+        font-size: 11px;
+        border-radius: 0;
+
+        @media(min-width: @screen-md-min) {
+            font-size: 13px;
+        }
+    }
+}
+
+.list-group-item-info {
+    &.badge {
+        background: @alert-info-bg;
+        color: @alert-info-text;
+    }
+}
+
+.list-group-item-warning.badge {
+    background: @alert-warning-bg;
+    color: @alert-warning-text;
+}
+
+.list-group-item-danger.badge {
+    background: @alert-danger-bg;
+    color: @alert-danger-text;
+}
+
+// List-group-icon and List-group-action
+//
+// Two hallmarks of the Cetaris list-group-item is the -icon area (block that is located to the left of the content)
+// along with a -action block that is located to the right of the content. Sometimes the action is clickable
+// while other times it is hidden -- depends on the device we are on.
+.list-group-icon, .list-group-action, .list-group-number {
+    top: 0;
+    position: absolute;
+    width: 35px;
+    height: 100%;
+
+    .po-rcc {
+        top: 40px;
+        left: 17px;
+        width: 33px;
+        height: 40px;
+    }
+
+    .po-drill {
+        top: 40px;
+        left: 20px;
+        width: 30px;
+        height: 40px;
+    }
+
+    .po-opo {
+        top: 40px;
+        left: 20px;
+        width: 30px;
+        height: 40px;
+    }
+
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+
+    @media (max-width: @screen-xs-max) {
+        width: 25px;
+        .po-rcc {
+            left: 13px;
+        }
+
+        .po-opo, .po-drill {
+            left: 15px;
+        }
+    }
+}
+
+.list-group-action.visible-xs ~ .list-group-content {
+    @media(min-width: @screen-xs-max){
+        margin-right: 0;
+    }
+}
+
+.list-group-icon ~ .list-group-content,
+.list-group-number ~ .list-group-content,
+cet-list-group-item-icon ~ .list-group-content,
+cet-list-group-item-number ~ .list-group-content{
+    margin-left: 30px;
+    @media (max-width: @screen-xs-max) {
+        margin-left: 20px;
+    }
+}
+
+#opoDetailShell-ListGroupHistory {
+    cet-list-group-item-icon ~ .list-group-content {
+        @media (max-width: @screen-xs-max) {
+            margin-left: 35px;
+        }
+    }
+}
+
+// See comments at top of section
+.list-group-icon {
+    left: 0;
+    border-right: 1px solid #ddd;
+    background: @blue;
+    border-color: @blue-border;
+    color: @white;
+
+    i {
+        margin-top: -14px;
+        margin-left: -13px;
+    }
+}
+
+// Sometimes we really just want a number, not an icon (shown in the same place)
+.list-group-number {
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 7px;
+    background: #f5f5f5;
+    color: @gray-darker;
+}
+
+// See comments at top of section
+.list-group-action {
+    right: 0;
+    background: none;
+    z-index: 1000;
+
+    a {
+        color: @gray;
+        display: block;
+        height: 100%;
+    }
+
+    &:hover {
+        i {
+            color: @gray-dark;
+        }
+    }
+
+    i {
+        margin-top: -12px;
+        margin-left: -12px;
+    }
+
+    .fa-check {
+        margin-left: -14px;
+    }
+
+    .fa-times {
+        margin-left: -12px;
+    }
+
+    .fa-chevron-right {
+        &.animated {
+            margin-left: -5px;
+            font-size: 1.9em;
+            opacity: 0.8;
+        }
+
+        margin-top: 10px;
+        margin-left: -3px;
+        font-size: 1.6em;
+        opacity: 0.2;
+    }
+
+    ~ .list-group-content {
+        right: 45px;
+    }
+}
+
+.list-group-heading {
+    display: inline-block;
+    height:28px;
+}
