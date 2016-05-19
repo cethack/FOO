@@ -40,3 +40,13 @@ After installing Node.js you need to install some packages globally.
 
 #### Fork FOO repository into your GitHub
 
+Go to `https://github.com/cethack/FOO` and cilck `fork` button at the top right.
+
+#### Clone FOO repository into your local
+
+- Go to your GitHub site and copy clone url
+- locate to your local directory to work with
+- run git clone 'your GitHub url for the repository' (e.g: https://github.com/david-lee/FOO)
+- change to FOO directory
+- run `npm install`: It will install all necessary pacakges defined in package.json
+
