@@ -16,9 +16,27 @@ You need to download Node.js and a couple of tools.
 - [node.js](https://nodejs.org/en/download/)
 - [Git](https://git-scm.com/downloads)
 - [SourceTree](https://www.sourcetreeapp.com/download/)
-- [Visual Studio Code](https://code.visualstudio.com/Download) *optional
+- [Visual Studio Code](https://code.visualstudio.com/Download)  *optional
 
 Those files have been downloaded and copied into Shared network drive 'Home' under 'FOO' folder.
 
-## Get Started
+#### Install npm packages
+
+After installing Node.js you need to install some packages globally.
+
+- npm install -g npm
+- npm install -g gulp
+- npm install -g typings
+- npm install -g tslint
+- npm install -g ts-node
+
+#### Set up Git global variables
+
+- git config --global user.name "YOUR NAME"
+- git config --global user.email "YOUR EMAIL ADDRESS"
+- git config --global credential.helper wincred
+- git config --global pull.default current
+- git config --global push.default current
+
+#### Fork FOO repository into your GitHub
 
