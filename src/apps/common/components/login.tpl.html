@@ -4,7 +4,7 @@
    }">
   <div class="logo" [style.display]="user.sessionExpiredByTimer ? 'none': ''">
     <img src="assets/images/cetaris-logo.png" />
-    <div><i>Fleet Assistant</i></div>
+    <div><i>Fleet Of One</i></div>
   </div>
   <form novalidate autocomplete="off">
     <div class="title hidden-xs" [style.display]="user.sessionExpiredByTimer ? 'none': ''">
@@ -44,7 +44,7 @@
       <button id="login-button"
         (click)="doLogin(username.value, password.value)"
         [disabled]="loginFormDisabled">
-        Sign In
+        Login In
       </button>
     </div>
   </form>
